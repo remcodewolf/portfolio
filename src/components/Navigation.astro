@@ -1,0 +1,71 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+---
+
+<div>
+  <nav class="hidden sm:flex items-center space-x-4">
+    <a class={currentPath === "" ? "border-b-2 border-blue-500" : ""} href="/"
+      >Home</a
+    >
+    <a
+      class={currentPath === "portfolio" ? "border-b-2 border-blue-500" : ""}
+      href="/portfolio">Portfolio</a
+    >
+    <a
+      class={currentPath === "blog" ? "border-b-2 border-blue-500" : ""}
+      href="/posts/1">Blog</a
+    >
+    <a
+      class={currentPath === "about" ? "border-b-2 border-blue-500" : ""}
+      href="/about">About Me</a
+    >
+    <a
+      class={currentPath === "contact" ? "border-b-2 border-blue-500" : ""}
+      href="/contact">Contact Me</a
+    >
+  </nav>
+
+  <div class="sm:hidden relative">
+    <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- Mobile Nav -->
+<div
+  id="mobile-menu"
+  class="absolute right-0 top-15 shadow-lg md:hidden hidden bg-white px-4 py-2 space-y-2 z-50"
+>
+  <a href="/" class="block text-gray-700 hover:text-blue-600">Home</a>
+  <a href="/portfolio" class="block text-gray-700 hover:text-blue-600"
+    >Portfolio</a
+  >
+  <a href="/posts/1" class="block text-gray-700 hover:text-blue-600">Blog</a>
+  <a href="/about" class="block text-gray-700 hover:text-blue-600">About Me</a>
+  <a href="/contact" class="block text-gray-700 hover:text-blue-600"
+    >Contact Me</a
+  >
+</div>
+
+<!-- <script is:inline>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script> -->

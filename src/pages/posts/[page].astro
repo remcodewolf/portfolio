@@ -1,0 +1,52 @@
+---
+import type { PaginateFunction } from "astro";
+import { getCollection } from "astro:content";
+import PageLayout from "../../layouts/PageLayout.astro";
+import BlogPost from "../../components/BlogPost.astro";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction;
+}) {
+  const allPosts = await getCollection("blog");
+
+  return paginate(allPosts, { pageSize: 6 });
+}
+const { page } = Astro.props;
+const pageTitle = "Blog";
+---
+
+<PageLayout pageTitle={pageTitle}>
+  <div class="mx-auto max-w-7xl shadow-md h-full p-4">
+    <h1 class="text-5xl font-bold text-center">
+      Blog Pagina {page.currentPage}
+    </h1>
+    <div class="flex flex-col justify-around h-full">
+      <p class="p-4">
+        This is where I will post about my journey learning Astro.
+      </p>
+      <ul
+        class="w-full grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6"
+      >
+        {
+          page.data.map((post: any) => (
+            <BlogPost
+              url={`/posts/${post.id}/`}
+              title={post.data.title}
+              cover={post.data.cover}
+              coverAlt={post.data.coverAlt}
+              description={post.data.description}
+            />
+          ))
+        }
+      </ul>
+      <div>
+        {page.url.first ? <a href={page.url.first}>First</a> : null}
+        {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
+        {page.url.next ? <a href={page.url.next}>Next</a> : null}
+        {page.url.last ? <a href={page.url.last}>Last</a> : null}
+      </div>
+    </div>
+  </div>
+</PageLayout>

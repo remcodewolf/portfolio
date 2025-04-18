@@ -1,0 +1,50 @@
+---
+import PageLayout from "./PageLayout.astro";
+import { Image } from "astro:assets";
+const { frontmatter } = Astro.props;
+---
+
+<PageLayout pageTitle={frontmatter.title}>
+  <div class="mx-auto max-w-7xl py-4 shadow-xl h-full">
+    <div class="mx-4 mb-4 flex justify-between pt-4">
+      <div>
+        <h1>{frontmatter.title}</h1>
+        <p>{frontmatter.pubDate.toLocaleDateString()}</p>
+        <p><em>{frontmatter.description}</em></p>
+        <p>Written by: {frontmatter.author}</p>
+      </div>
+      <div class="">
+        {
+          frontmatter.tags.map((tag: string) => (
+            <p class="">
+              <a href={`/tags/${tag}`}>{tag}</a>
+            </p>
+          ))
+        }
+      </div>
+    </div>
+    {
+      frontmatter.cover && frontmatter.coverAlt && (
+        <Image
+          class="w-full shadow-md"
+          src={frontmatter.cover}
+          alt={frontmatter.coverAlt}
+          widths={[400, 800, 1280]}
+          sizes="(max-width: 1280px) 100vw, 1280px"
+          format="webp"
+          loading="lazy"
+        />
+      )
+    }
+    <div class="m-4">
+      <div
+        class="prose dark:prose-invert !max-w-none
+  prose-h1:font-bold prose-h1:text-5xl prose-h1:text-center
+  prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl
+  prose-headings:underline"
+      >
+        <slot />
+      </div>
+    </div>
+  </div>
+</PageLayout>

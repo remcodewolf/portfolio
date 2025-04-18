@@ -1,0 +1,12 @@
+---
+import Navigation from "./Navigation.astro";
+---
+
+<header class="bg-white w-full shadow-md relative">
+  <div class="max-w-7xl py-4 px-4 -y mx-auto flex justify-between xl:px-0">
+    <h1 class="text-xl font-bold">Remco De Wolf</h1>
+    <div>
+      <Navigation client:load transition:persist/>
+    </div>
+  </div>
+</header>

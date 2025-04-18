@@ -1,0 +1,11 @@
+---
+import ContactForm from "../components/ContactForm.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+const pageTitle = "Contact Me";
+---
+
+<PageLayout pageTitle={pageTitle}>
+  <div class="mx-auto max-w-7xl shadow-md h-full">
+    <ContactForm />
+  </div>
+</PageLayout>
