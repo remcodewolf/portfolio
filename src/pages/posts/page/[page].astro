@@ -1,8 +1,8 @@
 ---
 import type { PaginateFunction } from "astro";
 import { getCollection } from "astro:content";
-import PageLayout from "../../layouts/PageLayout.astro";
-import BlogPost from "../../components/BlogPost.astro";
+import PageLayout from "../../../layouts/PageLayout.astro";
+import BlogPost from "../../../components/BlogPost.astro";
 
 export async function getStaticPaths({
   paginate,
@@ -10,6 +10,7 @@ export async function getStaticPaths({
   paginate: PaginateFunction;
 }) {
   const allPosts = await getCollection("blog");
+  console.log("Aantal posts gevonden:", allPosts.length);
 
   return paginate(allPosts, { pageSize: 6 });
 }
@@ -41,11 +42,35 @@ const pageTitle = "Blog";
           ))
         }
       </ul>
-      <div>
-        {page.url.first ? <a href={page.url.first}>First</a> : null}
-        {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
-        {page.url.next ? <a href={page.url.next}>Next</a> : null}
-        {page.url.last ? <a href={page.url.last}>Last</a> : null}
+      <div class="flex gap-4 justify-center mt-6">
+        {
+          page.url.first ? (
+            <a href={`/posts/page/1`} class="underline">
+              First
+            </a>
+          ) : null
+        }
+        {
+          page.url.prev ? (
+            <a href={`/posts/page/${page.currentPage - 1}`} class="underline">
+              Previous
+            </a>
+          ) : null
+        }
+        {
+          page.url.next ? (
+            <a href={`/posts/page/${page.currentPage + 1}`} class="underline">
+              Next
+            </a>
+          ) : null
+        }
+        {
+          page.url.last ? (
+            <a href={`/posts/page/${page.lastPage}`} class="underline">
+              Last
+            </a>
+          ) : null
+        }
       </div>
     </div>
   </div>

@@ -1,0 +1,7 @@
+---
+import { defineMiddleware } from "astro/middleware";
+
+defineMiddleware((_ctx, next) => {
+  return Response.redirect("/posts/page/1", 301);
+});
+---
