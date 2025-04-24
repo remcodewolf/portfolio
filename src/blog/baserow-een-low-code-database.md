@@ -1,8 +1,8 @@
 ---
 title: "Baserow: Een low code database"
-pubDate: 2022-07-01
+pubDate: 2022-07-07
 description: Een overzicht over de huidige stand van zaken in verband met AI en praktische voorbeelden.
-author: Remco & Sammy
+author: Remco De Wolf
 cover: ../assets/images/Baserow.webp
 coverAlt: Keyboard
 tags:

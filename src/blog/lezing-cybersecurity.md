@@ -1,6 +1,6 @@
 ---
 title: Lezing Cybersecurity
-description: Lezing van het leger over de huidige stand van zaken in verband met cybersecurity
+description: Lezing van het leger over de huidige stand van zaken in verband met cybersecurity. Ik kan hier nog vanalles over vertellen en ga kijken of dit niet te lang is. 
 author: Remco De Wolf
 cover: ../assets/images/cyber-command.jpg
 coverAlt: Toetsenbord

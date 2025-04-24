@@ -1,0 +1,66 @@
+---
+import BlogPost from "./BlogPost.astro";
+
+const { posts, title, currentPage, urlInfo } = Astro.props;
+---
+
+<div class="mx-auto max-w-7xl shadow-md min-h-full p-4">
+  <h1 class="text-5xl font-bold text-center">
+    {title} {currentPage ? `Pagina ${currentPage}` : ""}
+  </h1>
+  <div class="flex flex-col justify-around h-full">
+    <p class="p-4">
+      Op deze pagina's vind je informatie over Meet & Greets die we ik heb bijgewoond en andere zaken die mij interesseren.
+    </p>
+    <ul
+      class="w-full grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6"
+    >
+      {
+        posts.map((post: any) => (
+          <BlogPost
+            url={`/posts/${post.id}/`}
+            title={post.data.title}
+            cover={post.data.cover}
+            coverAlt={post.data.coverAlt}
+            description={post.data.description}
+          />
+        ))
+      }
+    </ul>
+
+    {
+      urlInfo ? (
+        <div class="flex gap-4 justify-center mt-6">
+          {
+            urlInfo.first && (
+              <a href={`/posts/page/1`} class="underline">
+                First
+              </a>
+            )
+          }
+          {
+            urlInfo.prev && (
+              <a href={`/posts/page/${currentPage - 1}`} class="underline">
+                Previous
+              </a>
+            )
+          }
+          {
+            urlInfo.next && (
+              <a href={`/posts/page/${currentPage + 1}`} class="underline">
+                Next
+              </a>
+            )
+          }
+          {
+            urlInfo.last && (
+              <a href={`/posts/page/${urlInfo.last}`} class="underline">
+                Last
+              </a>
+            )
+          }
+        </div>
+      ) : null
+    }
+  </div>
+</div>

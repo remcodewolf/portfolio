@@ -2,7 +2,7 @@
 title: Generative AI meetup 
 pubDate: 2022-07-01
 description: Een overzicht over de huidige stand van zaken in verband met AI en praktische voorbeelden.
-author: Remco & Sammy
+author: Remco De Wolf
 cover: ../assets/images/Generative-AI.webp
 coverAlt: Keyboard
 tags:
@@ -10,7 +10,7 @@ tags:
     - Generative AI
 slug: blog-post
 ---
-# Verslag van de Lezing: Sammy
+# Verslag van de Tech & Meet voor Generatieve AI
 ---
 
 ## Inleiding
