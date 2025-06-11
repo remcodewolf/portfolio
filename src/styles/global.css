@@ -1,2 +1,246 @@
-@import "tailwindcss";
-@plugin "@tailwindcss/typography";
+  @import "tailwindcss";
+  @plugin "@tailwindcss/typography";
+
+/* body, html {
+  margin: 0;
+  height: 100%;
+  background: #111;
+  font-family: sans-serif;
+}
+
+.bouncing-balls {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.ball {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: bounce 1s linear infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100vw, 50vh);
+  }
+  50% {
+    transform: translate(50vw, 100vh);
+  }
+  75% {
+    transform: translate(0vw, 50vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.ball:nth-child(1) {
+  width: 80px; height: 80px; background: #ff6ec4; top: 10%; left: 10%; border:red;
+}
+.ball:nth-child(2) {
+  width: 100px; height: 100px; background: #7873f5; top: 30%; left: 20%;
+  animation-duration: 12s;
+}
+.ball:nth-child(3) {
+  width: 60px; height: 60px; background: #47e891; top: 60%; left: 70%;
+  animation-duration: 8s;
+}
+
+.glass {
+  position: relative;
+  margin: 10vh auto;
+  padding: 2rem;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  z-index: 1;
+  text-align: center;
+} */
+/* body {
+  margin: 0;
+  background: #111;
+  overflow: hidden;
+}
+
+.bouncing-balls {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ball {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: bounce 8s ease-in-out infinite;
+}
+
+.ball:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  background-color: #ff6ec4;
+  top: 10%;
+  left: 10%;
+}
+
+.ball:nth-child(2) {
+  width: 80px;
+  height: 80px;
+  background-color: #7873f5;
+  top: 40%;
+  left: 80%;
+  animation-duration: 12s;
+}
+
+.ball:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  background-color: #47e891;
+  top: 70%;
+  left: 10%;
+  animation-duration: 10s;
+}
+@keyframes bounce-around {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(10vw, 10vh); }
+  40%  { transform: translate(60vw, 80vh); }
+  60%  { transform: translate(10vw, 60vh); }
+  80%  { transform: translate(90vw, 20vh); }
+  100% { transform: translate(0, 0); }
+} */
+body {
+    margin: 0;
+    background: #111; /* Donkere achtergrond voor contrast */
+    font-family: sans-serif;
+}
+
+/* Container voor de ballen animatie */
+.bouncing-balls {
+    position: fixed; /* Blijft op zijn plek t.o.v. de viewport */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Zorgt dat het achter de normale content ligt */
+    width: 100vw; /* Volledige breedte van de viewport */
+    height: 100vh; /* Volledige hoogte van de viewport */
+    pointer-events: none; /* Zorgt dat muisklikken door de ballen heen gaan */
+    overflow: hidden; /* Voorkomt dat ballen buiten de container zichtbaar zijn */
+}
+
+/* Individuele balstijlen */
+.ball {
+    position: absolute; /* Absolute positionering binnen .bouncing-balls */
+    border-radius: 50%; /* Maakt het rond */
+    opacity: 0.6; /* Een beetje transparant voor een mooier effect */
+    /* De animatie wordt hier nu wel aangevraagd */
+    animation: bounce-around ease-in-out infinite; /* Varianten voor duur en vertraging per bal */
+}
+
+/* Specifieke stijlen en animatie-eigenschappen voor elke bal */
+.ball:nth-child(1) {
+    width: 60px;
+    height: 60px;
+    background-color: #ff6ec4; /* Roze */
+    top: 10%; /* Startpositie */
+    left: 10%;
+    animation-duration: 18s; /* Langzamere animatie */
+    animation-delay: 0s;
+}
+
+.ball:nth-child(2) {
+    width: 80px;
+    height: 80px;
+    background-color: #7873f5; /* Paars */
+    top: 40%;
+    left: 80%;
+    animation-duration: 15s; /* Medium snelheid */
+    animation-delay: 2s; /* Begint 2 seconden later */
+}
+
+.ball:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    background-color: #e8e347; /* Groen */
+    top: 70%;
+    left: 10%;
+    animation-duration: 12s; /* Sneller */
+    animation-delay: 4s; /* Begint 4 seconden later */
+}
+
+.ball:nth-child(4) {
+    width: 60px;
+    height: 60px;
+    background-color: #6e7aff; /* Roze */
+    top: 80%; /* Startpositie */
+    left: 70%;
+    animation-duration: 14s; /* Langzamere animatie */
+    animation-delay: 0s;
+}
+
+.ball:nth-child(5) {
+    width: 60px;
+    height: 60px;
+    background-color: #ffb96e; /* Roze */
+    top: 10%; /* Startpositie */
+    left: 90%;
+    animation-duration: 18s; /* Langzamere animatie */
+    animation-delay: 3s;
+}
+
+.ball:nth-child(6) {
+    width: 60px;
+    height: 60px;
+    background-color: #6effa6; /* Roze */
+    top: 80%; /* Startpositie */
+    left: 15%;
+    animation-duration: 16s; /* Langzamere animatie */
+    animation-delay: 5s;
+}
+
+/* De @keyframes-regel die de beweging definieert */
+@keyframes bounce-around {
+    0% { transform: translate(0, 0); } /* Startpositie van de bal (relatief aan zijn initial top/left) */
+    20% { transform: translate(70vw, 30vh); } /* Beweeg 70% van viewport breedte, 30% van viewport hoogte */
+    40% { transform: translate(-30vw, 80vh); } /* Ga naar links (-30vw), naar beneden (80vh) */
+    60% { transform: translate(90vw, -40vh); } /* Ga naar rechts (90vw), naar boven (-40vh) */
+    80% { transform: translate(10vw, 50vh); } /* Terug naar links, naar beneden */
+    100% { transform: translate(0, 0); } /* Terug naar de startpositie (relatief aan de initial top/left) */
+}
+
+/* Optionele stijlen voor de content zodat deze zichtbaar is */
+.content {
+    position: relative;
+    z-index: 1; /* Zorgt dat de content boven de ballen ligt */
+    padding: 50px;
+    text-align: center;
+}
+
+.glass {
+  position: relative;
+  margin: 10vh auto;
+  padding: 2rem;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  z-index: 1;
+  text-align: center;
+}

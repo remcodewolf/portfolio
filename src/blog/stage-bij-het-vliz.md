@@ -1,6 +1,6 @@
 ---
 title: Stage bij het Vliz
-description: Lezing van het leger over de huidige stand van zaken in verband met cybersecurity
+description: Wat is de missie van het Vlaams instituut voor de Zee?
 author: Remco De Wolf
 cover: ../assets/images/VLIZ.jpg
 coverAlt: Toetsenbord

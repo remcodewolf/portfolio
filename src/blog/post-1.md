@@ -17,8 +17,6 @@ slug: blog-post
 
 Tijdens deze lezing kregen we een diepgaand overzicht van de **evolutie, toepassingen en strategieën rond Generatieve AI**, gebracht door **Christian Gijsels**, een doorgewinterde consultant en docent in businessanalyse en IT-architectuur. De sessie was boeiend, praktijkgericht en rijk aan voorbeelden uit de bedrijfswereld.
 
----
-
 ## Belangrijke Thema’s
 
 ### Evolutie van Generatieve AI
@@ -56,7 +54,6 @@ Christian besprak en vergeleek de strategieën van de belangrijkste AI-aanbieder
 - Hij gaf inzichten over **welke modellen geschikt zijn voor welk type toepassing**.
 - Ook de **GDPR-impact en de keuze tussen publieke vs. private AI-oplossingen** werden besproken.
 
----
 
 ## Niet Behandeld wegens Tijdgebrek
 
@@ -66,14 +63,9 @@ Ondanks de rijkdom aan informatie konden volgende thema's niet of slechts kort a
 - De volledige uitwerking van het **PREPARE framework** voor promptdesign.
 - Verdere technische verdieping in **LLM-architecturen en tokenbehandeling**.
 
----
 
 ## Persoonlijke Reflectie
 
-De sessie was inspirerend, praktijkgericht en zette aan tot nadenken. Christian Gijsels slaagde erin om complexe concepten helder uit te leggen, met veel aandacht voor bruikbare toepassingen. Zijn ervaring in consultancy en educatie kwam duidelijk naar voren.
-
----
-
-## Besluit
-
+De sessie was inspirerend, praktijkgericht en zette aan tot nadenken. Christian Gijsels slaagde erin om complexe concepten helder uit te leggen, met veel aandacht voor bruikbare toepassingen. Zijn ervaring in consultancy en educatie kwam duidelijk naar voren.  
 De lezing bewees dat **Generatieve AI** niet enkel een hype is, maar een transformerende kracht binnen de bedrijfswereld. Met tools zoals GPT-4o, Gemini en Claude kunnen bedrijven sneller, slimmer en creatiever werken – mits ze goed begeleid worden in hun gebruik. De inzichten van Christian Gijsels vormen daarbij een waardevol vertrekpunt.
+  

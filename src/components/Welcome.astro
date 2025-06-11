@@ -1,13 +1,85 @@
-<article class="max-w-7xl mx-auto shadow-md px-4">
-  <h1 class="text-7xl font-bold text-center m-2 text-shadow-lg">
-    Welkom op mijn website.
-  </h1>
-  <p class="">
-    Ik ben een gepassioneerd programmeur met focus op web development met Astro
-    en React
-  </p>
-  <p>
-    Neem gerust een kijkje in mijn portfolio en lees meer over mijn projecten en
-    vaardigheden.
-  </p>
-</article>
+---
+import { getImage, Image } from "astro:assets";
+import puzzle from "../assets/images/puzzle.jpg";
+// const optimizedImgKeyboard = await getImage({ src: imgKeyboard, width: 1280 });
+---
+
+
+<div class="max-w-7xl mx-auto shadow-md px-8 bg-white ">
+  <Image src={puzzle} alt="Code on screen" />
+  <div class="shadow-mdborder  border-gray-100 flex justify-around">
+    <article class="w-2/3 p-4 " >
+      <h1 class=" text-6xl font-bold text-center m-2 text-shadow-lg mb-4">
+        Mag ik mijzelf voorstellen?
+      </h1>
+      <p>
+        Mijn naam is Remco De Wolf. Na een carrière van meer dan 25 jaar in een 
+        andere sector besloot ik op mijn 50ste het roer volledig om te gooien. 
+        Ik volgde de opleiding Toegepaste Informatica – Software Engineering aan 
+        Howest in Brugge, waar ik mijn passie voor technologie en 
+        probleemoplossend denken verder ontwikkelde.
+      </p>
+      <br>
+      <p>
+        Vandaag combineer ik levenservaring met een frisse, technische blik.
+         Ik geloof sterk in continue groei, duidelijke communicatie en het bouwen 
+         van oplossingen die écht werken. 
+         In mijn portfolio vind je projecten waarin ik deze visie in de praktijk breng.
+      </p>
+      <br>
+      <p>Misschien ben ik wel het ontbrekende stukje van uw puzzle!</p>
+      <br>
+      <p>Download mijn CV: <a href="CV_Remco_De_Wolf.pdf" target="_blank" class="font-bold">CV_Remco_De_Wolf.pdf</a></p>
+      <br>
+    </article>
+    <article class=" p-4 max-w-md">
+    <h2 class="font-bold mb-4 p-4 text-xl">Kennis van:</h2>
+    <ul class="space-y-2">
+      <li class="flex items-center gap-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java logo" class="w-5 h-5" />
+        Java
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C# logo" class="w-5 h-5" />
+        C#
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt=".NET logo" class="w-5 h-5" />
+        .NET
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo" class="w-5 h-5" />
+        Python
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo" class="w-5 h-5" />
+        JavaScript/TypeScript
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML logo" class="w-5 h-5" />
+        HTML
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS logo" class="w-5 h-5" />
+        CSS
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL logo" class="w-5 h-5" />
+        MySQL/SQL
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue logo" class="w-5 h-5" />
+        Vue
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Laravel logo" class="w-5 h-5" />
+        Laravel
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React logo" class="w-5 h-5" />
+        React
+      </li>
+    </ul>
+  </article>
+  </div>
+</div>

@@ -1,7 +1,93 @@
 ---
-import Hero from "../components/Hero.astro";
+import PortFolioCard from "../components/PortfolioCard.astro"
 import PageLayout from "../layouts/PageLayout.astro";
+import daily from "../assets/images/daily_huddle.png"
+import duplicate from "../assets/images/duplicate_checker.png"
+import portfolio from "../assets/images/portfolio.png"
+import takeaway from "../assets/images/take_away.png"
+import battle from "../assets/images/battleship.png"
+import poor from "../assets/images/pd_thumb.png"  
+import mtg from "../assets/images/mtg.png" 
+
+
 const pageTitle = "Portfolio";
 ---
 
-<PageLayout pageTitle={pageTitle} />
+<PageLayout pageTitle={pageTitle} >
+<div class="max-w-7xl mx-auto shadow-md px-8 bg-white h-full">
+    <h1 class=" text-6xl font-bold text-center p-2 text-shadow-lg mb-4">Portfolio</h1>
+    <p>Hier vind je enkele projecten waar ik gedurende de studies aan heb gewerkt. </p>
+    <PortFolioCard
+        title="Daily Huddle"
+        cover={daily}
+        coverAlt="Dashboard of Daily Huddle"
+        description={`<p>Dit systeem is samen ontwikkeld met Clint Kindermans en Kevin DeMeulenaere.</p><br />
+        <p>Verschillende bedrijven hadden Howest een opdracht gegeven die studenten mochten volbrengen.</p><br />
+        <p>Het Ziekenhuis AZ-West uit Veurne wou een Dasboard hebben, waar de drukte
+         van de verschillende diensten te bezichtigen was. Indien nodig kon het personeel eventueel 
+         hulp vragen aan andere diensten. Er kunnen nieuwe departementen worden toegevoegd, 
+         er wordt gelogd wie hulp biedt en de bezetting wordt automatisch aangepast.</p><br />
+        <p>De volledige broncode is beschikbaar op <a href="https://github.com/jouw-repo" target="_blank" class="text-blue-500 underline">GitHub</a>.</p>`}
+         imagePosition="right"
+        />
+      <PortFolioCard
+        title="Portfolio"
+        cover={portfolio}
+        coverAlt="Homepage of portfolio"
+        imagePosition="right"
+        description={`<p>Deze portfolio werd ontwikkeld met het vrij nieuwe framework Astro.js.</p><br />
+        <p>Astro maakt het mogelijk om snelle websites te bouwen door alleen de noodzakelijke JavaScript te laden. 
+        Dankzij de componentgebaseerde structuur is het eenvoudig om overzichtelijke en herbruikbare elementen te maken.</p><br />
+        <p>Voor deze site werd gebruik gemaakt van Tailwind CSS voor de styling, en de afbeeldingen worden geoptimaliseerd 
+        via Astro’s eigen image component. De inhoud is modulair opgebouwd, zodat toekomstige projecten makkelijk toegevoegd kunnen worden.</p><br />
+        <p>De volledige broncode is beschikbaar op <a href="https://github.com/jouw-repo" target="_blank" class="text-blue-500 underline">GitHub</a>.</p>`}
+      />
+
+       <PortFolioCard
+          title="Take Away App"
+          cover={takeaway}
+          coverAlt="Homescreen take away app"
+          description={`<p>Deze Android-app is ontwikkeld samen met Stephen Bombeke, en laat gebruikers toe om eenvoudig eten te bestellen om af te halen of te laten leveren.</p><br />
+          <p>De app werd volledig gebouwd in <strong>Kotlin</strong> met behulp van <strong>Jetpack Compose</strong> voor een moderne en responsieve gebruikersinterface. Jetpack Compose maakte het mogelijk om snel iteratief te ontwikkelen met een declaratieve UI-aanpak.</p><br />
+          <p>Gebruikers kunnen menu-items selecteren, een bestelling plaatsen en hun bestelgeschiedenis raadplegen. Daarnaast zijn er ook admin-functies voorzien om menu’s te beheren en bestellingen op te volgen.</p><br />
+          <p>De volledige broncode is beschikbaar op <a href="https://github.com/jouw-repo" target="_blank" class="text-blue-500 underline">GitHub</a>.</p>`}
+        />
+        <PortFolioCard
+        title="Battleship"
+        cover={battle}
+        coverAlt="Ships at war"
+        description={`<p>Dit was de eerste opdracht in groep in het eerste jaar en samen met Kevin Henri, Clint Kindermans en Kevin DeMeulenaere.</p><br />
+        <p>Dit is het klassieke spel, maar dan in de browser. De frontend was puur HTML, Javascript en CSS en de backend was gemaakt in Java.</p><br />
+        <p>Het spel was wel nog een modus met salvo's en ook nog met de mogelijkheid om de schepen te verplaatsen. Verder zaten er nog een heleboel animaties en 4 verschillende skins in.</p><br />
+        <p>De volledige broncode is beschikbaar op <a href="https://github.com/jouw-repo" target="_blank" class="text-blue-500 underline">GitHub</a>.</p>`}
+         imagePosition="right"
+        />
+
+        <PortFolioCard
+        title="Pour decissions"
+        cover={poor}
+        coverAlt="Coctail Machine"
+        description={`<p>Dit is het laatste project dat ik samen met Kevin en Clint Kindermans heb gedaan.</p><br />
+        <p>Het doel van dit project, was om zowel hardware als software aan te sturen, volgens de principes van domain driven design</p> </p><br />
+        <p>Er zaten 8 motoren in, een Raspberry Pi, een Arduino Uno en je kon bestellen via een touchscreen of via een app op je gsm.
+        Het was een ambitieus project, waarmee we veel gelachen, maar ook veel gevloekt hebben.</p><br />
+        <p>De volledige broncode is beschikbaar op <a href="https://github.com/jouw-repo" target="_blank" class="text-blue-500 underline">GitHub</a>.</p>`}
+        />
+     <PortFolioCard
+      title="Magic: The Gathering"
+      cover={mtg}
+      coverAlt="Dashboard Magic: The Gathering Collecting Game"
+      imagePosition="right"
+      description={`<p>Dit was een individueel project van het kaartspel Magic: The Gathering.</p><br />
+      <p>De frontend werd ontwikkeld met <strong>Blazor</strong>, waardoor we een interactieve gebruikerservaring konden aanbieden met .NET-technologie in de browser.</p><br />
+      <p>De backend bestond uit een combinatie van een <strong>Web API</strong>, een <strong>Minimal API</strong> voor lichte endpoints en een <strong>GraphQL-laag</strong> voor flexibele dataquery’s. Voor inputvalidatie maakten we gebruik van <strong>FluentValidation</strong>, wat zorgde voor een robuuste en foutbestendige afhandeling van gebruikersgegevens.</p><br />
+      <p>Het was niet echt een spel, maar een tool om kaarten te verzamelen en te zoeken en te bekijken.</p><br />
+      <p>De volledige broncode is beschikbaar op <a href="https://github.com/jouw-repo" target="_blank" class="text-blue-500 underline">GitHub</a>.</p>`}
+      imagePosition="right"
+    />
+      
+
+   
+<div/>
+
+</PageLayout>

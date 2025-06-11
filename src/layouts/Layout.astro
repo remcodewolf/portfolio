@@ -13,9 +13,18 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
     <script src="/scripts/menu.js" type="module"></script>
+    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
     <ClientRouter />
   </head>
   <body class="min-h-screen">
+      <div class="bouncing-balls blur-xl">
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
     <slot />
   </body>
 </html>

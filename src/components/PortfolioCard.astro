@@ -1,0 +1,27 @@
+---
+const { title, cover, coverAlt, description, imagePosition = "left" } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div class="w-7xl border border-gray-200 p-4 rounded-xl shadow-md mx-auto max-w-6xl bg-white mb-4">
+  <div class={`flex justify-between ${imagePosition === "right" ? "flex-row-reverse" : ""}`}>
+    {cover && coverAlt && (
+      <div class="w-1/2 max-h-xl">
+        <Image
+          class="w-full shadow-md"
+          src={cover}
+          alt={coverAlt}
+          widths={[400, 800, 1280]}
+          sizes="(max-width: 1280px) 100vw, 1280px"
+          format="webp"
+          loading="lazy"
+        />
+      </div>
+    )}
+    
+    <div class="w-1/2 px-4">
+      <h2 class="text-xl font-bold">{title}</h2>
+      <p class="text-gray-500" set:html={description}></p>
+    </div>
+  </div>
+</div>

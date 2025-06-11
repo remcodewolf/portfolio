@@ -4,7 +4,7 @@ import BlogPost from "./BlogPost.astro";
 const { posts, title, currentPage, urlInfo } = Astro.props;
 ---
 
-<div class="mx-auto max-w-7xl shadow-md min-h-full p-4">
+<div class="mx-auto max-w-7xl shadow-md min-h-full p-4 bg-white">
   <h1 class="text-5xl font-bold text-center">
     {title} {currentPage ? `Pagina ${currentPage}` : ""}
   </h1>
